@@ -29,8 +29,12 @@ namespace TransitHub
             mapFactory = new MapFactory();
 
             //Testing code, to be loaded from Azure
-            //var _northtown = new TransitCenter(45.126965, -93.264399);
-            var _northtown = new TransitCenter(45.126965, -93.264399);
+            var _northtownStops = new List<ITransitStop>
+            {
+                new TransitStop(-93.264399, 45.126965)
+            };
+            ITransitHub _northtown = 
+                new TransitCenter(-93.264399, 45.126965, _northtownStops);
 
             map = mapFactory.CreateMap(_northtown);
             MapControl.Map = map;

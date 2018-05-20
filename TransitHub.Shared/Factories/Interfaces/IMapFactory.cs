@@ -7,6 +7,7 @@ namespace TransitHub.Shared.Interfaces
 {
     public interface IMapFactory
     {
-        Map CreateMap(ITransitStop stop);
+        Map CreateMap(ITransitHub hub);
+        Map CreateMap(ITransitLocation stop);
     }
 }

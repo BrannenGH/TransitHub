@@ -9,11 +9,22 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical">
+        <StackPanel HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    Orientation="Vertical"
+                    >
             <uwp:MapControl x:Name="MapControl" 
-                            VerticalAlignment="Stretch" 
+                            VerticalAlignment= "Stretch"
                             HorizontalAlignment="Stretch"
-                            Height="300"/>
+                            MinHeight="500"
+                            />
+            <StackPanel HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Orientation="Horizontal"
+                        >
+                <TextBox/>
+                <TextBox/>
+            </StackPanel>
             <Button HorizontalAlignment="Center" 
                     VerticalAlignment="Bottom">
                 Route
