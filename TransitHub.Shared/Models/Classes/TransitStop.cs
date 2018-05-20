@@ -1,13 +1,10 @@
-﻿using Mapsui.Geometries;
+﻿using System.IO;
+using Mapsui.Geometries;
 using Mapsui.Styles;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Reflection;
-using TransitHub.Shared.Interfaces;
 using Mapsui.Providers;
 using Mapsui.Projection;
-using System.IO;
+using TransitHub.Shared.Interfaces;
+using TransitHub.Shared.Helpers;
 
 namespace TransitHub.Shared.Models
 {
@@ -35,24 +32,9 @@ namespace TransitHub.Shared.Models
         private SymbolStyle CreateIcon()
         {
             // Image Courtesy of Freepik http://www.freepik.com
-            var path = "TransitHub.Shared.Assets.busstop.png"; 
+            Stream image = IconHelper.GetResourceStream("TransitHub.Shared.Assets.busstop.png");
 
-            Stream image = Assembly.GetExecutingAssembly().GetManifestResourceStream(path);
-            if (image == null)
-            {
-                throw new Exception($"Resource {path} could not be found.");
-            }
-
-            var bitmapId = BitmapRegistry.Instance.Register(image);
-            
-            // To set the offset correct we need to know the bitmap height
-            var bitmapHeight = 176; 
-
-            return new SymbolStyle {
-                BitmapId = bitmapId,
-                SymbolScale = 0.20,
-                SymbolOffset = new Offset(0, bitmapHeight * 0.5)
-            };
+            return IconHelper.CreateSymbolFromStream(image, 0.05, 125); 
         }
     }
 }
