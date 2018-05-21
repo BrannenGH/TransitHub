@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Blend for Visual Studio 15
+# Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub", "TransitHub\TransitHub.csproj", "{9D914865-EC20-42A0-8F14-E0545036C1F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub.Shared", "TransitHub.Shared\TransitHub.Shared.csproj", "{586BFF4B-746D-4025-9289-5BDA37F41FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransitHub.Shared", "TransitHub.Shared\TransitHub.Shared.csproj", "{586BFF4B-746D-4025-9289-5BDA37F41FD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub.MetroTransitIntegration", "TransitHub.MetroTransitIntegration\TransitHub.MetroTransitIntegration.csproj", "{EF15CB84-B8E0-494B-892B-A39247776272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub.MetroTransitIntegration.Tests", "TransitHub.MetroTransitIntegration.Tests\TransitHub.MetroTransitIntegration.Tests.csproj", "{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,38 @@ Global
 		{586BFF4B-746D-4025-9289-5BDA37F41FD9}.Release|x64.Build.0 = Release|Any CPU
 		{586BFF4B-746D-4025-9289-5BDA37F41FD9}.Release|x86.ActiveCfg = Release|Any CPU
 		{586BFF4B-746D-4025-9289-5BDA37F41FD9}.Release|x86.Build.0 = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|ARM.Build.0 = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|x64.Build.0 = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Debug|x86.Build.0 = Debug|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|ARM.ActiveCfg = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|ARM.Build.0 = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|x64.ActiveCfg = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|x64.Build.0 = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|x86.ActiveCfg = Release|Any CPU
+		{EF15CB84-B8E0-494B-892B-A39247776272}.Release|x86.Build.0 = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|ARM.Build.0 = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|x64.Build.0 = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Debug|x86.Build.0 = Debug|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|ARM.ActiveCfg = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|ARM.Build.0 = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|x64.ActiveCfg = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|x64.Build.0 = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|x86.ActiveCfg = Release|Any CPU
+		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
