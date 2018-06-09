@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using NUnit.Framework;
 using TransitHub.MetroTransitIntegration;
+using Moq;
+using TransitHub.MetroTransitIntegration.Models;
 
 namespace TransitHub.MetroTransitIntegration.Tests
 {
@@ -25,7 +27,16 @@ namespace TransitHub.MetroTransitIntegration.Tests
         [Test]
         public void GetRoutesTest()
         {
-            //Assert.IsNotEmpty(client.GetRoutesAsync().Result);
+            var routes = client.GetRoutesAsync().Result;
+            Assert.IsNotEmpty(routes);
+        }
+
+        [Test]
+        public void GetDirectionsTest()
+        {
+            var mockRoute = new Mock<MetroTransitRoute>();
+            mockRoute.SetupGet(o => o.Id).Returns(5);
+            Assert.IsNotEmpty(mockRoute.Object.Directions);
         }
     }
 }

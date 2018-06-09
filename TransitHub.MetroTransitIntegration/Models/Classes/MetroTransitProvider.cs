@@ -1,17 +1,20 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml;
+using System.Xml.Schema;
 using System.Xml.Serialization;
 
 namespace TransitHub.MetroTransitIntegration.Models
 {
     public class MetroTransitProvider
     {
-        [XmlAttribute("Value")]
-        public int Id { get; }
+        [JsonProperty(PropertyName = "value")]
+        public int Id { get; private set; }
 
-        [XmlAttribute("Text")]
-        public string Name { get; }
+        [JsonProperty(PropertyName = "text")]
+        public string Name { get; private set; }
 
         public override string ToString()
         {

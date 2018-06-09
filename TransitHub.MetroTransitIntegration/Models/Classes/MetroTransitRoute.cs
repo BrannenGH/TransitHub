@@ -2,6 +2,7 @@
 using System.Xml.Serialization;
 using System.ComponentModel;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace TransitHub.MetroTransitIntegration.Models
 {
@@ -14,17 +15,17 @@ namespace TransitHub.MetroTransitIntegration.Models
         North
     }
 
-    [SerializableAttribute()]
-    [DesignerCategoryAttribute("code")]
-    [XmlTypeAttribute(AnonymousType=true, Namespace="http://schemas.datacontract.org/2004/07/MetCouncil.Transit.ScheduleData")]
     public class MetroTransitRoute
     {
-        [XmlAttribute("Value")]
-        public int Id { get; }
-        [XmlAttribute("ProviderID")]
-        public int ProviderId { get; }
-        [XmlAttribute("Name")]
-        public string Name { get; }
+        [JsonProperty(PropertyName = "Route")]
+        public virtual int Id { get; private set; }
+
+        [JsonProperty(PropertyName = "ProviderID")]
+        public int ProviderId { get; private set; }
+
+        [JsonProperty(PropertyName = "Description")]
+        public string Name { get; private set; }
+
         private IList<MetroTransitDirection> _directions;
         public IList<MetroTransitDirection> Directions
         {
@@ -32,7 +33,7 @@ namespace TransitHub.MetroTransitIntegration.Models
             {
                 if (_directions == null)
                 {
-                    _directions = null; //this.GetDirectionsAsync(); 
+                    _directions = this.GetDirections(); 
                 }
                 return _directions;
             }
