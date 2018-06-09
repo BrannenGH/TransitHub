@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub.MetroTransitInte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub.MetroTransitIntegration.Tests", "TransitHub.MetroTransitIntegration.Tests\TransitHub.MetroTransitIntegration.Tests.csproj", "{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8D6C4999-990C-4F39-B489-E4A7502FF067}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace TransitHub.MetroTransitIntegration.Models
 {
     public class MetroTransitProvider
     {
+        [XmlAttribute("Value")]
         public int Id { get; }
-        public string Name { get; }
 
-        public MetroTransitProvider(string name, int id)
-        {
-            Name = name;
-            Id = id;
-        }
+        [XmlAttribute("Text")]
+        public string Name { get; }
 
         public override string ToString()
         {
