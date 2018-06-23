@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  transithub.webapi:
+    image: ${DOCKER_REGISTRY}transithubwebapi
+    build:
+      context: .
+      dockerfile: TransitHub.WebApi/Dockerfile
+    links:
+      - "db"
+  db:
+    image: postgres
+    expose:
+      - "5432"
+    environment:
+      POSTGRES_PASSWORD: dolphins
+      POSTGRES_DB: transitplan 
+
+      

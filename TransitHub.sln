@@ -7,14 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub", "TransitHub\Tr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransitHub.Shared", "TransitHub.Shared\TransitHub.Shared.csproj", "{586BFF4B-746D-4025-9289-5BDA37F41FD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub.MetroTransitIntegration", "TransitHub.MetroTransitIntegration\TransitHub.MetroTransitIntegration.csproj", "{EF15CB84-B8E0-494B-892B-A39247776272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransitHub.MetroTransitIntegration", "TransitHub.MetroTransitIntegration\TransitHub.MetroTransitIntegration.csproj", "{EF15CB84-B8E0-494B-892B-A39247776272}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransitHub.MetroTransitIntegration.Tests", "TransitHub.MetroTransitIntegration.Tests\TransitHub.MetroTransitIntegration.Tests.csproj", "{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransitHub.MetroTransitIntegration.Tests", "TransitHub.MetroTransitIntegration.Tests\TransitHub.MetroTransitIntegration.Tests.csproj", "{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8D6C4999-990C-4F39-B489-E4A7502FF067}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransitHub.WebApi", "TransitHub.WebApi\TransitHub.WebApi.csproj", "{60F0A1C4-6F36-4018-9E07-3BD577603028}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9BCFAC10-397F-410D-BF55-66BA54F584AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +100,38 @@ Global
 		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|x64.Build.0 = Release|Any CPU
 		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|x86.ActiveCfg = Release|Any CPU
 		{043B0FFC-C009-4B6F-AD27-1BD3909F59B6}.Release|x86.Build.0 = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|ARM.Build.0 = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|x64.Build.0 = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Debug|x86.Build.0 = Debug|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|ARM.ActiveCfg = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|ARM.Build.0 = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|x64.ActiveCfg = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|x64.Build.0 = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|x86.ActiveCfg = Release|Any CPU
+		{60F0A1C4-6F36-4018-9E07-3BD577603028}.Release|x86.Build.0 = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|x64.Build.0 = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Debug|x86.Build.0 = Debug|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|ARM.Build.0 = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|x64.ActiveCfg = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|x64.Build.0 = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|x86.ActiveCfg = Release|Any CPU
+		{9BCFAC10-397F-410D-BF55-66BA54F584AE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

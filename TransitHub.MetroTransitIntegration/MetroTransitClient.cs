@@ -47,7 +47,7 @@ namespace TransitHub.MetroTransitIntegration
             return routes;
         }
 
-        public async Task<IList<MetroTransitDirection>> GetDirectionForRoute(MetroTransitRoute route)
+        public async Task<IList<MetroTransitDirection>> GetDirectionForRouteAsync(MetroTransitRoute route)
         {
             Uri uri = new Uri($"http://svc.metrotransit.org/NexTrip/Directions/{route.Id}?format=json");
             string body = await GetBodyForUriAsync(uri);
@@ -56,7 +56,23 @@ namespace TransitHub.MetroTransitIntegration
                    .Select(x => (MetroTransitDirection) (int) x["Value"])
                    .ToList();
         }
-        
+
+        public async Task<IList<MetroTransitStop>> GetStopsForDirectionAsync(MetroTransitRoute route, MetroTransitDirection direction)
+        { 
+            Uri uri = new Uri($"http://svc.metrotransit.org/NexTrip/Stops/{route.Id}/{(int)direction}?format=json");
+            string body = await GetBodyForUriAsync(uri);
+            IList<MetroTransitStop> stops = JsonConvert.DeserializeObject<List<MetroTransitStop>>(body);
+            return stops;
+        }
+
+        public async Task<IList<MetroTransitVehicle>> GetBusLocationsAsync(MetroTransitRoute route)
+        {
+            Uri uri = new Uri($"http://svc.metrotransit.org/NexTrip/VehicleLocations/{route.Id}?format=json");
+            string body = await GetBodyForUriAsync(uri);
+            IList<MetroTransitVehicle> buses = JsonConvert.DeserializeObject<List<MetroTransitVehicle>>(body);
+            return buses;
+        }
+
         /// <summary>
         /// Sends a GET request to the URI and returns the body of the
         /// response.

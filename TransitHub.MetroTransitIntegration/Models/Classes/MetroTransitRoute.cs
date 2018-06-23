@@ -6,7 +6,6 @@ using Newtonsoft.Json;
 
 namespace TransitHub.MetroTransitIntegration.Models
 {
-
     public enum MetroTransitDirection
     {
         South = 1,
@@ -33,15 +32,26 @@ namespace TransitHub.MetroTransitIntegration.Models
             {
                 if (_directions == null)
                 {
-                    _directions = this.GetDirections(); 
+                    _directions = this.GetDirections();
                 }
                 return _directions;
             }
         }
 
+        private IList<MetroTransitStop>[] _stops = new IList<MetroTransitStop>[4];
+
         public override string ToString()
         {
-            return $"Metro Transit Route #{Id} : {Name}"; 
+            return $"Metro Transit Route #{Id} : {Name}";
+        }
+
+        public IList<MetroTransitStop> GetStopsForDirection(MetroTransitDirection direction)
+        {
+            if (_stops[(int)direction-1] == null)
+            {
+                _stops[(int)direction-1] = this.GetStops(direction);
+            }
+            return _stops[(int)direction-1];
         }
     }
 }

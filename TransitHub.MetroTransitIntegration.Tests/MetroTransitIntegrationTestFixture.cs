@@ -38,5 +38,27 @@ namespace TransitHub.MetroTransitIntegration.Tests
             mockRoute.SetupGet(o => o.Id).Returns(5);
             Assert.IsNotEmpty(mockRoute.Object.Directions);
         }
+
+        [Test]
+        public void GetStopsTest()
+        {
+            var mockRoute = new Mock<MetroTransitRoute>();
+            mockRoute.SetupGet(o => o.Id).Returns(5);
+            Assert.IsNotEmpty(
+                mockRoute.Object
+                .GetStopsForDirection(MetroTransitDirection.North)
+                );
+        }
+
+        [Test]
+        public void GetBusLocationsTest()
+        {
+            var mockRoute = new Mock<MetroTransitRoute>();
+            mockRoute.SetupGet(o => o.Id).Returns(10);
+            Assert.IsNotEmpty(
+                mockRoute.Object
+                .GetVehicles()
+                );
+        }
     }
 }
