@@ -2,10 +2,19 @@ version: '3.4'
 
 services:
   transithub.webapi:
-    image: ${DOCKER_REGISTRY}transithubwebapi
+    image: transithubwebapi
     build:
       context: .
       dockerfile: TransitHub.WebApi/Dockerfile
+    expose:
+      - "8080:80"
+    links:
+      - "db"
+  transithub.metrotransitintegration.synchronization:
+    image: transithubmetrotransitsync
+    build:
+      context: .
+      dockerfile: TransitHub.MetroTransitIntegration.Synchronization/Dockerfile
     links:
       - "db"
   db:
@@ -15,5 +24,3 @@ services:
     environment:
       POSTGRES_PASSWORD: dolphins
       POSTGRES_DB: transitplan 
-
-      
