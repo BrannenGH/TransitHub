@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: TransitHub.WebApi/Dockerfile
     expose:
-      - "8080:80"
+      - "80"
     links:
       - "db"
   transithub.metrotransitintegration.synchronization:
@@ -16,6 +16,7 @@ services:
       context: .
       dockerfile: TransitHub.MetroTransitIntegration.Synchronization/Dockerfile
     links:
+      - "transithub.webapi"
       - "db"
   db:
     image: postgres
